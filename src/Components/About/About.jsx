@@ -77,11 +77,11 @@ export const About = () => {
         <Type />
         </div>
      
-      <div id='#about'  >
+      <div id="about">
        <Introduction />
        <Timeline />
       </div>
-      <div id="#skills" style={{marginTop:'100px'}}>
+      <div id="skills" style={{marginTop:'100px'}}>
         <Techstacks />
       </div>
     </>

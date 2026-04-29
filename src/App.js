@@ -19,21 +19,21 @@ export default function App() {
   }, []);
   return (
     <div id="top" className={`${themename} app`}>
-      <section id="#home">
+      <section id="home">
         <Header />
       </section>
      
       <main>
       
      
-       <section id='#about'>
+       <section id="about">
        <About />
        </section>
         <Github />
-        <section id="#projects">
+        <section id="projects">
           <Projects />
         </section>
-        <section id="#contact">
+        <section id="contact">
         <Contact />
         <ChatBotForm/>
         </section>

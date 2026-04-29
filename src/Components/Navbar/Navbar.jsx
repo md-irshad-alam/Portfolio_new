@@ -27,7 +27,7 @@ export const Navbar = () => {
           <li className="nav__list-item">
             <a
               href="#home"
-              onClick={() => toggleNavList("#home")}
+              onClick={() => toggleNavList("home")}
               className="link link--nav"
             >
               Home
@@ -36,7 +36,7 @@ export const Navbar = () => {
           <li className="nav__list-item">
             <a
               href="#about"
-              onClick={() => toggleNavList("#about")}
+              onClick={() => toggleNavList("about")}
               className="link link--nav"
             >
               About
@@ -45,7 +45,7 @@ export const Navbar = () => {
           <li className="nav__list-item">
             <a
               href="#skills"
-              onClick={() => toggleNavList("#skills")}
+              onClick={() => toggleNavList("skills")}
               className="link link--nav"
             >
               Skills
@@ -54,7 +54,7 @@ export const Navbar = () => {
           <li className="nav__list-item">
             <a
               href="#projects"
-              onClick={() => toggleNavList("#projects")}
+              onClick={() => toggleNavList("projects")}
               className="link link--nav"
             >
               Projects
@@ -63,7 +63,7 @@ export const Navbar = () => {
           <li className="nav__list-item">
             <a
               href="#contact"
-              onClick={() => toggleNavList("#contact")}
+              onClick={() => toggleNavList("contact")}
               className="link link--nav"
             >
               Contact
@@ -72,7 +72,7 @@ export const Navbar = () => {
           <li className="nav__list-item">
             <a
               href="https://drive.google.com/file/d/1ULT87yN-JhGQTKr7OtyrU3DVl6KwHpGh/view?usp=drive_link"
-              onClick={toggleNavList}
+              onClick={() => setShowNavList(!showNavList)}
               className="link link--nav"
               target="_blank"
               rel="noreferrer"
