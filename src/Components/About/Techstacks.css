@@ -1,115 +1,90 @@
-
 .mainTech {
-  margin-bottom: -100px;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
+
 .techsection {
-  width: 100%;
-  text-align: center;
-  background-color: var(--clr-bg);
-  display:grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+  perspective: 1000px; /* Essential for 3D unfolding effect */
+}
+
+.skill-card {
+  background: var(--clr-bg);
+  border: 1px solid rgba(var(--clr-primary-rgb), 0.2);
+  padding: 15px 30px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  display: flex;
   align-items: center;
   justify-content: center;
-  row-gap: 2rem;
- 
-  
-
-  
-  /* max-height: 400px; */
+  min-width: 150px;
+  border-left: 4px solid var(--clr-primary);
+  background: linear-gradient(135deg, var(--clr-bg) 0%, rgba(var(--clr-primary-rgb), 0.05) 100%);
 }
 
- .techsection > div {
-  width: 70px;
-  height: 60px;
-  box-shadow: var(--shadow);
-  /* z-index: 1; */
-  
-  /* transition: all 0.5s ease 0s;
-   */
-   transition: transform 0.3s ease;
-}
-/* .techsection > div:hover {
-  background-color: var(--clr-bg);
-  overflow: hidden;
-  transform: scale(1.08);
-  box-shadow: rgba(0, 0, 0, 0.36) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  border: 1px solid var(--clr-primary);
-}  */
-
-.techsection > div:hover {
-  background-color: var(--clr-bg);
-  transform: scale(1.08);
-  box-shadow: rgba(0, 0, 0, 0.36) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  border-color: gray; /* Make the border gray on hover */
-  animation: borderAnimation 3s linear forwards; /* Apply the animation */
+.skill-card:hover {
+  transform: translateY(-5px) rotateX(10deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--clr-primary);
 }
 
-.techsection > div > svg {
- 
-  font-size: 8vh;
-  color: var(--clr-primary);
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--clr-fg);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
-/* .techsection > div > h5 {
-  position: relative;
-  top: 8px;
-} */
 
-@media (max-width: 600px) {
+/* Custom AOS Animation: Unfold */
+[data-aos='unfold'] {
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos='unfold'].aos-animate {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
   .techsection {
-    width: 95%;
-    margin: auto;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+    gap: 15px;
   }
-  .techsection > div {
-    width: 40%;
-    margin-right: 5%;
-    margin-bottom: 2%;
-    height: 5vh;
-    text-align: center;
-    
+  
+  .skill-card {
+    min-width: 120px;
+    padding: 12px 20px;
   }
-  .techsection > div > svg {
- 
-    font-size: 2vh;
-    color: var(--clr-primary);
-    text-align: center;
+  
+  .skill-name {
+    font-size: 0.9rem;
   }
 }
 
-@keyframes borderAnimation {
-  0% {
-    border-top-width: 1px;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    border-left-width: 0;
-  }
-  25% {
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 0;
-    border-left-width: 0;
-  }
-  50% {
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-    border-left-width: 0;
-  }
-  75% {
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-    border-left-width: 1px;
-  }
-  100% {
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-    border-left-width: 1px;
-  }
+/* Adding a subtle 'paper line' effect */
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 14px,
+    rgba(var(--clr-primary-rgb), 0.03) 15px
+  );
+  pointer-events: none;
 }

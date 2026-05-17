@@ -60,15 +60,7 @@ export const Navbar = () => {
               Projects
             </a>
           </li>
-          <li className="nav__list-item">
-            <a
-              href="#contact"
-              onClick={() => toggleNavList("contact")}
-              className="link link--nav"
-            >
-              Contact
-            </a>
-          </li>
+          
           <li className="nav__list-item">
             <a
               href="https://drive.google.com/file/d/1ULT87yN-JhGQTKr7OtyrU3DVl6KwHpGh/view?usp=drive_link"

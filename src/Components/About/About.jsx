@@ -15,61 +15,6 @@ export const About = () => {
   return (
     <>
       
-     {/* <div className="about center">
-       
-         <p className="about__desc" data-aos="fade-right">
-              Strong problem-solving skills and ability to learn new technologies quickly. Seeking an opportunity to work 
-          in a dynamic and collaborative team where I can leverage my skills and gain further experience in full-stack web development."
-        </p> 
-       <div className="about__contact center">
-          <a
-            href="https://github.com/Md-Irshad-Alam"
-            aria-label="github"
-            target="_blank"
-            rel="noreferrer"
-            className="link link--icon"
-          >
-            <GitHubIcon />
-          </a>
-          <a
-            href="mailto:almairsh0205@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="github"
-            className="link link--icon"
-          >
-            <EmailIcon />
-          </a>
-          <a
-            href="tel:+917079355936"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="github"
-            className="link link--icon"
-          >
-            <PhoneIcon />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/md-irshad-alam-761b491b9/"
-            aria-label="github"
-            className="link link--icon"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LinkedInIcon />
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1Vbm_wmplkTCGzosxH_hUaD4nvkGrZNx-/view?usp=share_link"
-            aria-label="github"
-            className="link link--icon"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <DescriptionIcon />
-          </a>
-        </div>  
-      </div>
-        */}
         <div style={{textAlign:'center', marginBottom:'-80px'}}>
         <h1 data-aos="fade-right">
           Hi, I am <span className="about__name">Irshad Alam</span>
@@ -81,7 +26,7 @@ export const About = () => {
        <Introduction />
        <Timeline />
       </div>
-      <div id="skills" style={{marginTop:'100px'}}>
+      <div id="skills">
         <Techstacks />
       </div>
     </>
